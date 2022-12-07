@@ -16,7 +16,7 @@
    
 <!-- Sidebar/menu -->
 <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
-  <a style="text-decoration: none;" href="maceykeungportfolio.html" onclick="w3_close()"><h3 class="w3-padding-64 w3-center"><b>MACEY<br>KEUNG</b></h3>
+  <a style="text-decoration: none;" href="index.html" onclick="w3_close()"><h3 class="w3-padding-64 w3-center"><b>MACEY<br>KEUNG</b></h3>
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
   <a href="studio-art.html" onclick="w3_close()" class="w3-bar-item 
   w3-button">STUDIO ART</a> 
@@ -24,7 +24,7 @@
   <a href="antifragile-zine.html" onclick="w3_close()" class="w3-bar-item w3-button">ANTIFRAGILE ZINE</a>
   <br>
   <br>
-  <a href="maceykeungportfolio.html#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT ME</a>       
+  <a href="index.html#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT ME</a>       
 </nav>
 
 <!-- Top menu on small screens -->
@@ -88,4 +88,26 @@
     </div>
   </div>
 
+  <script>
+    // Script to open and close sidebar
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("myOverlay").style.display = "block";
+    }
+     
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("myOverlay").style.display = "none";
+    }
+    
+    // Modal Image Gallery
+    function onClick(element) {
+      document.getElementById("img01").src = element.src;
+      document.getElementById("modal01").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+    }
+    
+    </script>
+    
 </html>
